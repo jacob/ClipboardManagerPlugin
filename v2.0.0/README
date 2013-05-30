@@ -1,9 +1,8 @@
-
 This version of the plugin is for Phonegap versions >= 2.0.0
 
 ## Adding the Plugin to your project ##
 1. To install the plugin, move clipboardmanager.js to your project's www folder and include a reference to it in your html files. 
-2. Create a folder called 'src/com/saatcioglu/phonegap/ClipBoardManagerPlugin' within your project's src folder. Note that case is important.
+2. Create a folder called 'src/com/saatcioglu/phonegap/ClipboardManagerPlugin' within your project's src folder. Note that case is important.
 3. Copy ClipboardManagerPlugin.java into that new folder.
 4. Add the following line in your plugins.xml (located in /res/xml/)
 <plugin name="ClipboardManagerPlugin" value="com.saatcioglu.phonegap.ClipboardManagerPlugin.ClipboardManagerPlugin"/>
