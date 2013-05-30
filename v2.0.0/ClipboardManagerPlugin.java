@@ -11,7 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import android.content.Context;
-import android.text.ClipboardManager;
+import android.content.ClipboardManager;
 
 
 import org.apache.cordova.api.Plugin;
