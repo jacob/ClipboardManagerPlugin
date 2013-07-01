@@ -11,7 +11,7 @@ window.clipboardManagerCopy = function(str, success, fail) {
 };
 
 window.clipboardManagerPaste = function(success, fail) {
-	cordova.exec(success, fail, "ClipboardManagerPlugin", "copy", []);
+	cordova.exec(success, fail, "ClipboardManagerPlugin", "paste", []);
 };
 
 
