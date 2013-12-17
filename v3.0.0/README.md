@@ -2,7 +2,7 @@ This version of the plugin is for Phonegap versions >= 3.0.0
 
 ## Adding the Plugin to your project ##
 1. Clone this repository
-2. At the root of your project, run : 
+2. At the root of your project, run: 
 
     phonegap local plugin add /path/to/plugin/ClipboardManagerPlugin/v3.0.0
 
@@ -10,7 +10,7 @@ This version of the plugin is for Phonegap versions >= 3.0.0
 ## Using the plugin ##
 The plugin creates a clipboard object.
 
-`clipboard.copy(str, success, fail)` that copies the given string into the clipboard
+`clipboard.copy(str, success, fail)` that copies the given string into the clipboard  
 `clipboard.paste(success, fail)` that returns the text from the clipboard
 
 `success` and `fail` are callback functions. 
