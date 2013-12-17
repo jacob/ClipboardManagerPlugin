@@ -9,7 +9,6 @@
 var Clipboard = function () {};
 
 Clipboard.prototype.copy = function(str, success, fail) {
-    alert("copy called");
     return cordova.exec(success, fail, "ClipboardManagerPlugin", "copy", [str]);
 };
 
