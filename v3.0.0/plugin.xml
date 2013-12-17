@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.saatcioglu.phonegap.ClipboardManagerPlugin" version="1.0">
+    <name>ClipboardManagerPlugin</name>
+    <description>This plugin gives access to Copy and Paste methods.</description>
+    <license>MIT License</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <keywords>cordova,copy,paste,clipboard</keywords>
+    <js-module src="www/clipboard.js" name="ClipboardManagerPlugin">
+        <clobbers target="clipboard" />
+    </js-module>
+    
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="ClipboardManagerPlugin">
+                <param name="android-package" value="com.saatcioglu.phonegap.ClipboardManagerPlugin.ClipboardManagerPlugin" />
+            </feature>
+        </config-file>
+        
+        <!-- cordova plugin src files -->
+        <source-file src="src/android/ClipboardManagerPlugin.java" target-dir="src/com/saatcioglu/phonegap/ClipboardManagerPlugin" />
+    </platform>
+</plugin>
