@@ -1,7 +1,8 @@
 # ClipboardManager plugin for Phonegap #
-By Omer Saatcioglu
-Enhanced by Guillaume Charhon
-Ported to Phonegap 2.0 by Jacob Robbins
+By Omer Saatcioglu  
+Enhanced by Guillaume Charhon  
+Ported to Phonegap 2.0 by Jacob Robbins  
+Ported to Phonegap 3.0 by Guillaume Charhon  
 
 This plugin gives access to Copy & Paste methods of the Android ClipboardManager.
 
