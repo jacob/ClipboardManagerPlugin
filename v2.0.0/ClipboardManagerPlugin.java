@@ -22,8 +22,6 @@ import org.apache.cordova.api.PluginResult;
 public class ClipboardManagerPlugin extends CordovaPlugin {
 	private static final String actionCopy = "copy";
 	private static final String actionPaste = "paste";
-	private static final String errorParse = "Couldn't get the text to copy";
-	private static final String errorUnknown = "Unknown Error";
 
 	private ClipboardManager mClipboardManager;
 
@@ -39,30 +37,27 @@ public class ClipboardManagerPlugin extends CordovaPlugin {
 		
 	
 		// Copy
-		if (action.equals(actionCopy)) {
+		if (actionCopy.equals(action)) {
 			String arg = "";
 			try {
 				arg = (String) args.get(0);
 				mClipboardManager.setText(arg);
+				callbackContext.success();
 			} catch (JSONException e) {
-			      callbackContext.error( errorParse);
+				callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage()));
 			} catch (Exception e) {
-			      callbackContext.error( errorUnknown);
+				callbackContext.error(e.getMessage());
 			}
-			callbackContext.success();
 		// Paste
-		} else if (action.equals(actionPaste)) {
+		} else if (actionPaste.equals(action)) {
 			String arg = (String) mClipboardManager.getText();
 			if (arg == null) {
 				arg = "";
 			}
-			PluginResult copy_ret = new PluginResult(PluginResult.Status.OK, arg);
-			callbackContext.sendPluginResult(copy_ret);
-			callbackContext.success();
-			
+			callbackContext.success(arg);	
 		} else {
-		      callbackContext.error("invalid action");
-		      return false;
+			callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.INVALID_ACTION, action));
+			return false;
 		}
 
 		return true;
